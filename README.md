@@ -1,5 +1,5 @@
 # Sowa
-Repo for Sowa example files.
+Repo for Sowa kubernetes example.
 
 1. Install docker: <br>
 https://docs.docker.com/engine/install/ubuntu/
@@ -13,4 +13,13 @@ Add your user to the docker group. <br>
 
 2. Install minikube: <br>
 https://minikube.sigs.k8s.io/docs/start/
+
+Start minikube with --driver=docker: <br>
+```minikube start --driver=docker```
+
+3. Dashboard (unsecure!!): <br>
+```kubectl proxy --address='0.0.0.0' --disable-filter=true```
+
+Web Access:
+```http://<host>:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default```
 
