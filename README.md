@@ -1,1 +1,2 @@
-# Sowa example
+# Sowa
+Repo for Sowa example files.
