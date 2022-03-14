@@ -5,7 +5,7 @@ Repo for Sowa example files.
 https://docs.docker.com/engine/install/ubuntu/
 
 2. Add user to docker group: <br>
-'''sudo groupadd docker'''
+```sudo groupadd docker```
 Add your user to the docker group.
 '''sudo usermod -aG docker $USER'''
 
