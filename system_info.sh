@@ -5,7 +5,7 @@ sys_log_file="system-info.log"
 # If logfile doesn't exists. 
 if [ ! -f $sys_log_file ]
   then
-    printf "Memory\t\tDisk\t\tCPU\n" > $sys_log_file
+    printf "RAM\t\tDisk\t\tCPU\n" > $sys_log_file
 fi
 
 
