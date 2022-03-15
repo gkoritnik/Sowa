@@ -19,7 +19,7 @@ spec:
         image: sladesoftware/log-application:latest
         volumeMounts:
          - name: log-output
-           mountPath: /tmp/
+           mountPath: /var/log/
       - name: beat-auto
         image: elastic/filebeat:7.8.0
         env:
@@ -31,7 +31,7 @@ spec:
          ]
         volumeMounts:
          - name: log-output
-           mountPath: /tmp/
+           mountPath: /var/log/
          - name: beat-config
            mountPath: /etc/filebeat/
       volumes:
