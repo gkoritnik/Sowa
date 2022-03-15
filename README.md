@@ -90,17 +90,12 @@ sowa@sowa:~/ELK/git/Sowa/ELK_minikube$
 ```kubectl port-forward --address=0.0.0.0 service/kibana 8080:5601```
 
 10. Kibana:
-- Go to Logs:
-
-<img width="252" alt="image" src="https://user-images.githubusercontent.com/25821944/158456476-d2dd9918-b4ed-42e5-ac0f-bfa6400f31b1.png">
-
-- go to settings and add CPU, Memory, Disk columns and remove columns Field and Message:
-
-<img width="143" alt="image" src="https://user-images.githubusercontent.com/25821944/158456766-fc15ae96-6e04-447a-86ee-53bd9472843f.png">
-
-<img width="783" alt="image" src="https://user-images.githubusercontent.com/25821944/158456927-f4f80b41-80ed-447d-a536-16bea929fd17.png">
-
-<img width="938" alt="image" src="https://user-images.githubusercontent.com/25821944/158457155-b7209f5e-287b-4940-a752-51d0fa3e97c5.png">
+- Go to Logs:<br>
+<img width="252" alt="image" src="https://user-images.githubusercontent.com/25821944/158456476-d2dd9918-b4ed-42e5-ac0f-bfa6400f31b1.png"> <br>
+- go to settings and add CPU, Memory, Disk columns and remove columns Field and Message: <br>
+<img width="143" alt="image" src="https://user-images.githubusercontent.com/25821944/158456766-fc15ae96-6e04-447a-86ee-53bd9472843f.png"> <br>
+<img width="783" alt="image" src="https://user-images.githubusercontent.com/25821944/158456927-f4f80b41-80ed-447d-a536-16bea929fd17.png"> <br>
+<img width="938" alt="image" src="https://user-images.githubusercontent.com/25821944/158457155-b7209f5e-287b-4940-a752-51d0fa3e97c5.png"> <br>
 
 
 
