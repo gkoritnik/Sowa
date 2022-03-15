@@ -28,8 +28,8 @@ Start minikube with --driver=docker: <br>
 ```minikube start --driver=docker```
 
 3. Dashboard (unsecure!!) - optional: <br>
-```kubectl proxy --address='0.0.0.0' --disable-filter=true```
-Web Access:
+```kubectl proxy --address='0.0.0.0' --disable-filter=true```<br>
+Web Access:<br>
 ```http://<host>:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default```
 
 4. Install Helm <br>
