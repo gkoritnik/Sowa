@@ -59,7 +59,9 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 ```
-To check pods execute command: ```minikube kubectl -- get pods -A```
+To check pods execute command: 
+```minikube kubectl -- get pods -A```
+
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$ minikube kubectl -- get pods -A
 NAMESPACE     NAME                               READY   STATUS    RESTARTS      AGE
 default       app-filebeat-5655c8c8c7-w6qsd      2/2     Running   0             8m22s
@@ -75,7 +77,9 @@ kube-system   kube-scheduler-minikube            1/1     Running   0            
 kube-system   storage-provisioner                1/1     Running   1 (11m ago)   12m
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$
 
-To check cluster services execute command ```minikube kubectl -- get service```:
+To check cluster services execute command: 
+```minikube kubectl -- get service```
+
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$ minikube kubectl -- get service
 NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
 elasticsearch   NodePort    10.103.222.166   <none>        9200:31996/TCP   9m41s
