@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-auto
+  name: app-filebeat
   labels:
-    name: app-auto
+    name: app-filebeat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: app-auto
+      name: app-filebeat
   template:
     metadata:
       labels:
-        name: app-auto
+        name: app-filebeat
     spec:
       containers:
-      - name: app-auto
-        image: sladesoftware/log-application:latest
+      - name: app-filebeat
+        image: rogerg18/sowa:latest
         volumeMounts:
          - name: log-output
            mountPath: /var/log/
-      - name: beat-auto
+      - name: filebeat
         image: elastic/filebeat:7.8.0
         env:
         - name: LOGSTASH_HOSTS
@@ -32,14 +32,14 @@ spec:
         volumeMounts:
          - name: log-output
            mountPath: /var/log/
-         - name: beat-config
+         - name: filebeat-config
            mountPath: /etc/filebeat/
       volumes:
        - name: log-output
          emptyDir: {}
-       - name: beat-config
+       - name: filebeat-config
          configMap:
-           name: beat-config
+           name: filebeat-config
            items:
            - key: filebeat.yml
              path: filebeat.yml
@@ -47,7 +47,7 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: beat-config
+  name: filebeat-config
 data:
   filebeat.yml: |
 {{ .Files.Get "filebeat.yml" | indent 4 }}
