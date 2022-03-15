@@ -23,3 +23,8 @@ Start minikube with --driver=docker: <br>
 Web Access:
 ```http://<host>:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default```
 
+4. Install Helm <br>
+```wget https://get.helm.sh/helm-v3.4.1-linux-amd64.tar.gz
+tar xvf helm-v3.4.1-linux-amd64.tar.gz
+helm version
+helm repo add elastic https://helm.elastic.co```
