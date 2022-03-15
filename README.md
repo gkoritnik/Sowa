@@ -1,5 +1,10 @@
-# Sowa
-Repo for Sowa kubernetes example.
+# Sowa challenge
+**System requirements:**
+Operating System - recommended: Ubuntu
+Memory: 8GB
+CPU: 4
+
+**Repo for Sowa kubernetes example - manual**
 
 1. Install docker: <br>
 https://docs.docker.com/engine/install/ubuntu/
