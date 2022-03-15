@@ -33,9 +33,10 @@ Web Access:
 2. tar xvf helm-v3.4.1-linux-amd64.tar.gz
 3. helm version
 4. helm repo add elastic https://helm.elastic.co```
+```
 Helm version:
 ```
- helm version
+helm version
 version.BuildInfo{Version:"v3.4.1", GitCommit:"c4e74854886b2efe3321e185578e6db9be0a6e29", GitTreeState:"clean", GoVersion:"go1.14.11"}
 ```
 
