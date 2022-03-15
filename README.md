@@ -1,8 +1,8 @@
 # Sowa challenge
-**System requirements:**
-Operating System - recommended: Ubuntu
-Memory: 8GB
-CPU: 4
+**System requirements:**<br>
+Operating System - recommended: Ubuntu<br>
+Memory: 8GB<br>
+CPU: 4<br>
 
 **Repo for Sowa kubernetes example - manual**
 
