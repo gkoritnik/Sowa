@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sys_log_file="system-info.log"
+sys_log_file="/var/log/system-info.log"
 
 # If logfile doesn't exists.
 if [ ! -f $sys_log_file ]
