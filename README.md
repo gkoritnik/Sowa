@@ -49,9 +49,8 @@ cd ELK_minikube
 ```
 
 8. In /ELK_minikube use helm to deploy ELK stack:
+```helm install elk . --set global.hostIp=$(minikube ip)```
 ```
-helm install elk . --set global.hostIp=$(minikube ip)
-
 Result:
 NAME: elk
 LAST DEPLOYED: Tue Mar 15 19:16:17 2022
@@ -59,7 +58,6 @@ NAMESPACE: default
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
-
 ```
 To check pods execute command: ```minikube kubectl -- get pods -A```
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$ minikube kubectl -- get pods -A
@@ -92,12 +90,9 @@ sowa@sowa:~/ELK/git/Sowa/ELK_minikube$
 10. Kibana:
 
 Go to Logs:<br>
-<p>
 <img width="252" alt="image" src="https://user-images.githubusercontent.com/25821944/158456476-d2dd9918-b4ed-42e5-ac0f-bfa6400f31b1.png"> <br>
-</p>
 Go to settings and add CPU, Memory, Disk columns and remove columns Field and Message: <br>
-<p>
 <img width="143" alt="image" src="https://user-images.githubusercontent.com/25821944/158456766-fc15ae96-6e04-447a-86ee-53bd9472843f.png"> <br>
 <img width="783" alt="image" src="https://user-images.githubusercontent.com/25821944/158456927-f4f80b41-80ed-447d-a536-16bea929fd17.png"> <br>
 <img width="938" alt="image" src="https://user-images.githubusercontent.com/25821944/158457155-b7209f5e-287b-4940-a752-51d0fa3e97c5.png"> <br>
-</p>
+
