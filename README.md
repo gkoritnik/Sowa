@@ -49,7 +49,9 @@ cd ELK_minikube
 ```
 
 8. In /ELK_minikube use helm to deploy ELK stack:
-```helm install elk . --set global.hostIp=$(minikube ip)```
+```
+helm install elk . --set global.hostIp=$(minikube ip)
+```
 ```
 Result:
 NAME: elk
@@ -60,7 +62,9 @@ REVISION: 1
 TEST SUITE: None
 ```
 To check pods execute command: 
-```minikube kubectl -- get pods -A```
+```
+minikube kubectl -- get pods -A
+```
 
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$ minikube kubectl -- get pods -A
 NAMESPACE     NAME                               READY   STATUS    RESTARTS      AGE
@@ -78,7 +82,9 @@ kube-system   storage-provisioner                1/1     Running   1 (11m ago)  
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$
 
 To check cluster services execute command: 
-```minikube kubectl -- get service```
+```
+minikube kubectl -- get service
+```
 
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$ minikube kubectl -- get service
 NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
@@ -89,7 +95,9 @@ logstash        NodePort    10.106.55.109    <none>        5044:31998/TCP   9m41
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$
 
 9. Forward port to access Kibana outside localhost
-```kubectl port-forward --address=0.0.0.0 service/kibana 8080:5601```
+```
+kubectl port-forward --address=0.0.0.0 service/kibana 8080:5601
+```
 
 10. Kibana:
 
