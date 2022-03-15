@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kibana
+  labels:
+    name: kibana
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: kibana
+  template:
+    metadata:
+      labels:
+         name: kibana
+    spec:
+      containers:
+        - name: kibana
+          image: kibana:7.8.0
+          ports:
+            - containerPort: 5601
+              name: http
+          env:
+            - name: ELASTICSEARCH_HOSTS
+              value: http://{{ .Values.global.hostIp }}:{{ .Values.ports.elasticsearch }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana
+  labels:
+    name: kibana
+spec:
+  selector:
+    name: kibana
+  type: NodePort
+  ports:
+    - nodePort: {{ .Values.ports.kibana }}
+      port: 5601
+      protocol: TCP
+      targetPort: 5601
