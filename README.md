@@ -66,7 +66,7 @@ To check pods execute command:
 ```
 minikube kubectl -- get pods -A
 ```
-
+```
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$ minikube kubectl -- get pods -A
 NAMESPACE     NAME                               READY   STATUS    RESTARTS      AGE
 default       app-filebeat-5655c8c8c7-w6qsd      2/2     Running   0             8m22s
@@ -81,12 +81,13 @@ kube-system   kube-proxy-82pfk                   1/1     Running   0            
 kube-system   kube-scheduler-minikube            1/1     Running   0             12m
 kube-system   storage-provisioner                1/1     Running   1 (11m ago)   12m
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$
+```
 
 To check cluster services execute command: 
 ```
 minikube kubectl -- get service
 ```
-
+```
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$ minikube kubectl -- get service
 NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
 elasticsearch   NodePort    10.103.222.166   <none>        9200:31996/TCP   9m41s
@@ -94,7 +95,7 @@ kibana          NodePort    10.106.78.106    <none>        5601:31997/TCP   9m41
 kubernetes      ClusterIP   10.96.0.1        <none>        443/TCP          13m
 logstash        NodePort    10.106.55.109    <none>        5044:31998/TCP   9m41s
 sowa@sowa:~/ELK/git/Sowa/ELK_minikube$
-
+```
 9. Forward port to access Kibana outside localhost
 ```
 kubectl port-forward --address=0.0.0.0 service/kibana 8080:5601
