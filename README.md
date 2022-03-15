@@ -24,7 +24,15 @@ Web Access:
 ```http://<host>:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default```
 
 4. Install Helm <br>
-```wget https://get.helm.sh/helm-v3.4.1-linux-amd64.tar.gz
-tar xvf helm-v3.4.1-linux-amd64.tar.gz
-helm version
-helm repo add elastic https://helm.elastic.co```
+```
+1. wget https://get.helm.sh/helm-v3.4.1-linux-amd64.tar.gz
+2. tar xvf helm-v3.4.1-linux-amd64.tar.gz
+3. helm version
+4. helm repo add elastic https://helm.elastic.co```
+Helm version:
+```
+ helm version
+version.BuildInfo{Version:"v3.4.1", GitCommit:"c4e74854886b2efe3321e185578e6db9be0a6e29", GitTreeState:"clean", GoVersion:"go1.14.11"}
+```
+
+5. Add elastic repository in Helm
